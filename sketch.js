@@ -29,7 +29,7 @@ function setup() {
   block = createSprite(340, 230, 20, 20);
   block.visible = false
 
-  text = createSprite(400, 200, 10, 10);
+  text = createSprite(400, 350, 10, 10);
   text.addImage(textImg);
   text.visible = false
 
@@ -41,7 +41,7 @@ function draw() {
   background(bgImg); 
   
   
-
+if(!hasDocked){
   if(keyDown('Right_Arrow')){
   spacecraft0.addImage(spacecraftImg4);
   spacecraft0.x = spacecraft0.x + 4;
@@ -60,11 +60,14 @@ if(keyDown('Up_Arrow')){
 spacecraft0.addImage(spacecraftImg2);
 spacecraft0.y = spacecraft0.y - 4;
 }
+}
+if(spacecraft0.y<=(iss.y+70))
 if(spacecraft0.isTouching(block)){
   hasDocked = true
   text.visible = true
   
 }
+
 
   drawSprites();
 }
