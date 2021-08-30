@@ -40,7 +40,7 @@ function setup() {
 function draw() {
   background(bgImg); 
   
-  
+  spacecraft0.x = spacecraft0.x + random(-1,1);
 if(!hasDocked){
   if(keyDown('Right_Arrow')){
   spacecraft0.addImage(spacecraftImg4);
