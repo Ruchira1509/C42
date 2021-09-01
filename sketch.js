@@ -61,7 +61,7 @@ spacecraft0.addImage(spacecraftImg2);
 spacecraft0.y = spacecraft0.y - 4;
 }
 }
-if(spacecraft.y <= (iss.y+70) && spacecraft.x <= (iss.x-10)){ 
+if(spacecraft.y <= (iss.y+70) && spacecraft0.x <= (iss.x-10)){ 
   hasDocked = true
   text.visible = true
 }
